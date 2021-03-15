@@ -97,7 +97,7 @@ class MailSender(QtWidgets.QMainWindow):
         message['To'] = addr_to
         #subject = 'Проверка МТС-отчётов к сведению сотрудников'
         message['Subject'] = subject
-        messageText = MIMEText(text, 'plain', 'utf-8')
+        messageText = MIMEText(text, 'html', 'utf-8')
         message.attach(messageText)
 
         if len(attachment_files) > 0:
